@@ -1,0 +1,248 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "numerosSecretos",
+      "request": "launch",
+      "mainClass": "preptrabalho1.numerosSecretos",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio20",
+      "request": "launch",
+      "mainClass": "array.array1e2.exercicio20",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio10",
+      "request": "launch",
+      "mainClass": "array.array1.exercicio10",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio3",
+      "request": "launch",
+      "mainClass": "array.array1.exercicio3",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio1",
+      "request": "launch",
+      "mainClass": "array.array1.exercicio1",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio6",
+      "request": "launch",
+      "mainClass": "aula2.exercicio6",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio10",
+      "request": "launch",
+      "mainClass": "aula1.exercicio10",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio1",
+      "request": "launch",
+      "mainClass": "aula2.exercicio1",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio4",
+      "request": "launch",
+      "mainClass": "aula2.exercicio4",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio2",
+      "request": "launch",
+      "mainClass": "aula2.exercicio2",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio10",
+      "request": "launch",
+      "mainClass": "exercicio10",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio9",
+      "request": "launch",
+      "mainClass": "exercicio9",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio8",
+      "request": "launch",
+      "mainClass": "exercicio8",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio7",
+      "request": "launch",
+      "mainClass": "exercicio7",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio6",
+      "request": "launch",
+      "mainClass": "exercicio6",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio5",
+      "request": "launch",
+      "mainClass": "exercicio5",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio4",
+      "request": "launch",
+      "mainClass": "exercicio4",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio3",
+      "request": "launch",
+      "mainClass": "exercicio3",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio2",
+      "request": "launch",
+      "mainClass": "exercicio2",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "exercicio1",
+      "request": "launch",
+      "mainClass": "exercicio1",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "ExemploVariavelInteira",
+      "request": "launch",
+      "mainClass": "ExemploVariavelInteira",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "NumberPrinter",
+      "request": "launch",
+      "mainClass": "roger.NumberPrinter",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "GradeChecker",
+      "request": "launch",
+      "mainClass": "roger.GradeChecker",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "BasicOperations",
+      "request": "launch",
+      "mainClass": "roger.BasicOperations",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "HelloWorld",
+      "request": "launch",
+      "mainClass": "roger.HelloWorld",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "fatorial",
+      "request": "launch",
+      "mainClass": "fatorial",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "numeroprimo",
+      "request": "launch",
+      "mainClass": "numeroprimo",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "Fatorial",
+      "request": "launch",
+      "mainClass": "Fatorial",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "AnoBissexto",
+      "request": "launch",
+      "mainClass": "AnoBissexto",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "parouimpar",
+      "request": "launch",
+      "mainClass": "parouimpar",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "media",
+      "request": "launch",
+      "mainClass": "media",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "type": "java",
+      "name": "olamundo",
+      "request": "launch",
+      "mainClass": "olamundo",
+      "projectName": "ROGER_2c0367aa"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/Alunos/OneDrive/Documentos/ROGER",
+      "program": "c:/Users/Alunos/OneDrive/Documentos/ROGER/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

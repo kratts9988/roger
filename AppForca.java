@@ -1,117 +1,128 @@
-import java.io.PrintStream;
-import java.util.Random;
-import java.util.Scanner;
+import java.io.PrintStream; // Importar a classe PrintStream para imprimir
+import java.util.Scanner; // Importar a classe Scanner para ler
 
-public class FORCA {
-    private static final Object PalavraDescoberta = null;
-    private static final String[] PalavrasSecretas = null;
+public class AppForca {
     static int[] acertos = new int[3];
     static String[] nome = new String[3];
     static char resposta;
     static int contador = 0;
-    String[] palavrasSecretas = {"OTARIO", "VOA MLK", "LAELE", "VUK MAL", "HOP", "K9"};
+
     public static void main(String[] Forca) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(BemVindo());
+        Scanner in = new Scanner(System.in);
+        PrintStream out = System.out;
+        out.println("\033[H\033[2J");
+        out.println(Welcome());
         Menu();
-        scanner.close();
+        in.close();
     }
 
-        public static String Menu() {
-            Scanner in = new Scanner(System.in);
-            System.out.println("FALA RELIKIA, QUER JOGAR UM JOGO MALADEZA?: ");
-            System.out.println("1- QUERO JOGAR ZÉ!");
-            System.out.println("2- CÊ QUER FALAR MEUS PONTOS CÊ FALA ZÉ.");
-            System.out.println("3- ANÃO ZÉ, CE NÃO ME ESTRESSA NÃO ZÉ, TCHÔ SAIR DAQUI.");
-            System.out.println("DIGITE UM NUMERO: ");
-            int jogo= in.nextInt();
-        switch (jogo) {
+    /* 1 */
+    public static String Menu() { // método Menu
+        Scanner in = new Scanner(System.in);
+        PrintStream out = System.out;
+        /*
+         * Iniciar jogo
+         * Verificar pontuação
+         * Sair
+         */
+        out.println("1 - Iniciar jogo");
+        out.println("2 - Verificar pontuação");
+        out.println("3 - Sair");
+        out.println("Digite a opção desejada: ");
+        int opcao = in.nextInt();
+        switch (opcao) {
             case 1:
-            JogoMaladeza();
+                IniciarJogo();
                 break;
             case 2:
-                Pontos();
+                VerificarPontuacao();
                 break;
             case 3:
                 Sair();
                 break;
             default:
-            System.out.println("O ZÉ CÊ E BURRU MERMO EIN. OPÇÃO INVALIDA!!!!");
-            break;
-            }
-            in.close();
-            return "menu";
+                out.println("Opção inválida!");
+                break;
+        }
+        in.close();
+        return "Menu";
+    }
+
+    /* 2 */
+    public static String IniciarJogo() { // método IniciarJogo
+        Scanner in = new Scanner(System.in);
+        PrintStream out = System.out;
+        out.println("\033[H\033[2J");
+        out.println(Welcome());
+
+        for (int i = 0; i < nome.length; i++) {
+            nome[i] = null;
+        }
+        // Nome do jogador
+        for (int i = 0; i < 1; i++) {
+            out.println("Digite seu nome: ");
+            nome[i] = in.nextLine();
+            out.printf("Bem vindo, %s!\n", nome[i]);
+
         }
 
-        public static String JogoMaladeza() {
-            Scanner in = new Scanner(System.in);
-            PrintStream out = System.out;
-            System.out.println("\033[H\033[2J");
-            System.out.println(BemVindo());
+        // Palavra secreta
+        out.println("Digite a palavra secreta: ");
+        String palavraSecreta = in.nextLine();
+        boolean palavraValida = false;
+        StringBuilder palavraAtual = new StringBuilder();
+        int tentativas = 0;
 
-            for (int i = 0; i < nome.length; i++) {
-                nome[i] = null;
-            }
-            for (int i = 0;i < 1;i++) {
-                System.out.println("CHAME TEU VULGO MALVADÃO: ");
-                nome[i] = in.nextLine();
-                System.out.printf("FORTE ABRAÇO RLK, %S!\n", nome[i]);
-            }
-            System.out.println("EU DUVIDO CÊ ACERTAR UMA DESSA: ");
-            Random random = new Random();
-            String PalavraCerta = in.nextLine();
-            boolean letraDescoberta = false;
-            
-            StringBuilder PalavraDescoberta = new StringBuilder();
-            int tentativas = 0;
-            
-            String PalavraSecreta = PalavrasSecretas[random.nextInt(PalavrasSecretas.length)];
-            
-            for (int i = 0; i < PalavraCerta.length();i++) {
-                PalavraDescoberta.append("_");
-            }
-            System.out.printf("CÊ TEM 5 TENTATIVA ZÉ. \nPALAVRA ATUAL: %s\n",PalavraCerta);
-        
-            while (!letraDescoberta) {
-                System.out.println("DIGITE UMA LETRA: ");
-                char letra = in.next().charAt(0);
-                for (int i = 0; i < PalavraCerta.length(); i++){
-                    if (PalavraSecreta.charAt(i) == letra) {
-                        letraDescoberta = true;
-                        PalavraDescoberta.setCharAt(i, letra);
+        for (int i = 0; i < palavraSecreta.length(); i++) {
+            palavraAtual.append("_");
+        }
+        // Exibe a palavra atual
+        out.printf("Você tem 5 tentativas para acertar. \nPalavra atual : %s\n", palavraAtual);
+
+        // Loop principal do jogo
+        while (!palavraValida) {
+            // Solicita ao jogador que digite uma letra
+            out.print("Digite uma letra: ");
+            char letra = in.next().charAt(0);
+            boolean LetraVerdadeiro = false;
+            for (int i = 0; i < palavraSecreta.length(); i++) {
+                if (palavraSecreta.charAt(i) == letra) {
+                    LetraVerdadeiro = true;
+                    palavraAtual.setCharAt(i, letra);
                 }
             }
-            
+            // se o jogador digitar mais de uma letra
             if (letra > 1) {
-                System.out.println("DIGITE UMA LETRA: ");
+                out.println("Digite apenas uma letra!");
             }
-            System.out.printf("Palavra atual : %s\n", letraDescoberta);
-            if (letraDescoberta) {
-                System.out.println("Letra correta! ");
-            } else{
-                tentativas = tentativas +1;
-                System.out.println("Letra incorreta! ");
+            out.printf("Palavra atual : %s\n", palavraAtual);
+
+            if (LetraVerdadeiro) {
+                out.println("Letra correta! ");
+            } else {
+                tentativas = tentativas + 1;
+                out.println("Letra incorreta! ");
             }
             if (tentativas == 5) {
                 out.printf("Você perdeu %s!", nome[0]);
-                letraDescoberta = true;
+                palavraValida = true;
                 out.printf("\nPontuação do jogador %s: %d\n", nome[0], acertos[0]);
                 out.printf("\n%s, você deseja jogar novamente? (S/N): ", nome[0]);
                 char resposta = in.next().charAt(0);
                 if (resposta == 'S' || resposta == 's') {
-                    JogoMaladeza();
+                    IniciarJogo();
                 }
                 if (resposta == 'N' || resposta == 'n') {
                     Sair();
-                    letraDescoberta = false;
+                    palavraValida = true;
                     break;
                 }
                 break;
             }
 
-            if (PalavraDescoberta.toString().equals(PalavraCerta)) {
-                out.printf("Parabéns %s, você acertou a palavra: [%s]. ", nome[0], PalavraCerta);
-                letraDescoberta = true;
+            if (palavraAtual.toString().equals(palavraSecreta)) {
+                out.printf("Parabéns %s, você acertou a palavra: [%s]. ", nome[0], palavraSecreta);
+                palavraValida = true;
                 contador = contador + 1;
                 if (contador == 1) {
                     acertos[0] = acertos[0] + 1;
@@ -120,11 +131,11 @@ public class FORCA {
                 out.printf("\n%s, você deseja jogar novamente? (S/N): ", nome[0]);
                 char resposta = in.next().charAt(0);
                 if (resposta == 'S' || resposta == 's') {
-                    JogoMaladeza();
+                    IniciarJogo();
                 }
                 if (resposta == 'N' || resposta == 'n') {
                     Menu();
-                    letraDescoberta = true;
+                    palavraValida = true;
                     break;
                 }
                 contador = contador + 1;
@@ -136,7 +147,9 @@ public class FORCA {
         in.close();
         return "IniciarJogo";
     }
-    public static String Pontos() { // método VerificarPontuacao
+
+    /* 3 */
+    public static String VerificarPontuacao() { // método VerificarPontuacao
         Scanner in = new Scanner(System.in);
         PrintStream out = System.out;
         out.println("\033[H\033[2J");
@@ -207,7 +220,9 @@ public class FORCA {
         in.close();
         return "VerificarPontuacao";
     }
- public static String Sair() { // método Sair
+
+    /* 4 */
+    public static String Sair() { // método Sair
         PrintStream out = System.out;
         out.println("\033[H\033[2J");
         out.println("Jogo encerrado.");
@@ -215,7 +230,7 @@ public class FORCA {
     }
 
     /* 5 */
-    public static String BemVindo() { // método boas vindas
+    public static String Welcome() { // método boas vindas
         return "Bem vindo ao Jogo da Forca!";
     }
 
